@@ -59,6 +59,7 @@ h6 {
 }
 
 h1 {
+  font-size: clamp(1.90rem, 5svw, 2.75rem);
   color: var(--neutral-dark-charcoal);
 }
 
