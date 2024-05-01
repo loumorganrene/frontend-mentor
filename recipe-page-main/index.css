@@ -1,0 +1,43 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+table {
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: top;
+  padding-bottom: 1rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
