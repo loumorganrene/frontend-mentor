@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -30,7 +31,11 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
 }
 
 p {
@@ -40,14 +45,25 @@ p {
 
 ul,
 ol {
+  text-wrap: balance;
   padding: 0 2rem;
+  
   li {
-    padding: 0.25rem 0;
+    padding: 0 0 .75rem 1rem;
   }
 }
 
 .margin-inline {
   margin: 0 2rem;
+}
+
+aside {
+  padding: 1rem;
+  background-color: lightcoral;
+
+  h4 {
+    margin-top: 0;
+  }
 }
 
 table {
@@ -70,6 +86,14 @@ table {
     padding: 8px 10px;
     text-align: left;
   }
+
+  tr:nth-last-child(1) {
+
+    th,
+    td {
+      border-bottom: none;
+    }
+  }
 }
 
 .attribution {
@@ -90,6 +114,7 @@ table {
 }
 
 @media (min-width: 575px) {
+
   img {
     border-radius: 20px;
   }
@@ -100,6 +125,7 @@ table {
 }
 
 @media (min-width: 768px) {
+
   body {
     background-color: salmon;
   }
