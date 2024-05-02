@@ -111,6 +111,7 @@ aside {
   h3 {
     font-size: 1.1rem;
     font-family: var(--family-sansserif);
+    font-weight: var(--fweight-bold);
     color: var(--secondary-clr);
     margin-top: 0;
   }
