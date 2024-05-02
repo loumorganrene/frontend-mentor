@@ -54,6 +54,7 @@ h4,
 h5,
 h6 {
   font-family: var(--family-serif);
+  font-weight: var(--fweight-light);
   text-wrap: balance;
   margin: 1.5rem 0;
 }
@@ -94,7 +95,7 @@ ol {
 
 ol {
   li::marker{
-    font-weight: 700;
+    font-weight: var(--fweight-bold);
   }
 }
 
@@ -107,7 +108,8 @@ aside {
   padding: 1rem;
   background-color: var(--neutra-rose);
 
-  h4 {
+  h3 {
+    font-size: 1.1rem;
     font-family: var(--family-sansserif);
     color: var(--secondary-clr);
     margin-top: 0;
@@ -137,6 +139,10 @@ table {
     border-bottom: 1px solid var(--neutral-lightgrey);
     padding: 1rem;
     text-align: left;
+  }
+
+  td {
+    font-weight: var(--fweight-bold);
   }
 
   th {
