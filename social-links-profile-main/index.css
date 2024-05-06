@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap');
+
+:root {
+  --primary-clr: hsl(75, 94%, 57%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(0, 0%, 20%);
+  --neutral-dark-grey: hsl(0, 0%, 12%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+
+  font-size: 16px;
+  font-family: var(--family-sansserif);
+  color: var(--neutral-white);
+  --family-sansserif: "Inter", sans-serif;
+  --fweight-light: 400;
+  --fweight-medium: 600;
+  --fweight-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--neutral-off-black);
+  min-height: 100svh;
+}
+
+body,
+dialog,
+header,
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+dialog {
+  background: var(--neutral-dark-grey);
+  margin: 25svh auto;
+  padding: 2rem;
+  border-radius: 10px;
+  border: none;
+  max-width: 340px;
+  width: 75svw;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+q {
+  text-wrap: balance;
+}
+
+header {
+  gap: .5rem;
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 0 1rem;
+    max-width: clamp(5rem, 7svw, 7rem);
+  }
+
+  h2 {
+    font-weight: var(--fweight-bold);
+  }
+
+  h3 {
+    color: var(--primary-clr);
+  }
+  
+  h3 {
+    font-size: .85rem;
+  }
+
+  q {
+    font-size: .75rem;
+    padding: 1rem 0 1.5rem;
+  }
+}
+
+ul {
+  width: 100%;
+  list-style-type: none;
+  text-wrap: balance;
+  gap: 1rem;
+
+  li {
+    width: 100%;
+  }
+}
+
+button {
+  background: var(--neutral-grey);
+  padding: .85rem 0;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: var(--fweight-bold);
+}
+
+li:hover button,
+li:active button {
+  cursor: pointer;
+  color: var(--neutral-grey);
+  background: var(--primary-clr);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
