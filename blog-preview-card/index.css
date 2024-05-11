@@ -46,7 +46,8 @@ a {
     color: var(--primary-clr);
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     outline: none !important;
     border: 2px solid var(--primary-clr);
     padding: 4px;
@@ -131,10 +132,10 @@ article {
             color: white;
           }
 
-          &:focus {
+          &:focus,
+          &:focus-visible {
             outline: none !important;
             border: 2px solid white;
-            padding: 4px;
             box-shadow: none;
           }
         }
