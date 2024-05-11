@@ -23,6 +23,7 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100svh;
   background: var(--primary-clr);
@@ -87,7 +88,6 @@ article {
   border: 1px solid var(--neutral-black);
   box-shadow: 8px 8px 0 0 var(--neutral-black);
   width: 327px;
-  margin: 50% auto;
   padding: 1.5rem;
   gap: 1rem;
 
