@@ -118,7 +118,7 @@ article {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      font-size: 0.75rem;
+      font-size: clamp(0.75rem, 0.112vw + 0.839rem, .875rem);
 
       .article__tag {
         max-width: fit-content;
@@ -147,8 +147,9 @@ article {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+
     .article__title {
-      font-size: 1.25rem;
+      font-size: clamp(1.25rem, 0.223vw + 1.179rem, 1.5rem);
       font-weight: var(--fweight-bold);
     }
 
@@ -171,7 +172,19 @@ article {
     }
     .article__author-name {
       font-weight: var(--fweight-bold);
-      font-size: 0.8rem;
+      font-size: clamp(0.75rem, 0.112vw + 0.839rem, .875rem);
     }
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
