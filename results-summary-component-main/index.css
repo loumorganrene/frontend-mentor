@@ -12,6 +12,7 @@
   --neutral-pale-blue: hsl(221, 100%, 96%);
   --neutral-light-lavender: hsl(241, 100%, 89%);
   --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+  --neurtal-dark-gray-blue-rgba: rgba(0, 0, 0, 0.3);
 
   --gradient-slate-blue: hsl(252, 100%, 67%);
   --gradient-royal-blue: hsl(241, 81%, 54%);
@@ -59,6 +60,42 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--family-serif);
+  font-weight: var(--fweight-light);
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: .825rem;
+  font-weight: var(--fweight-bold);
+  color: var(--neutral-light-lavender);
+  margin-block: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: var(--fweight-medium);
+  color: var(--neutral-white);
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: var(--fweight-medium);
+  color: var(--neutral-dark-gray-blue);
+  margin-block: 1.5rem 0;
+}
+
+h6 {
+  font-size: .75rem;
+  font-weight: var(--fweight-medium);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -68,9 +105,19 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100svh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  border-radius: 0 0 30px 30px;
+  background: linear-gradient(
+    var(--gradient-slate-blue), 
+    var(--gradient-royal-blue));
 }
 
 section {
@@ -78,13 +125,6 @@ section {
   flex-direction: column;
   gap: 1rem;
   padding: 0 2rem;
-
-  &#score-description {
-    text-align: center;
-    p {
-      text-align: left;
-    }
-  }
 }
 
 img,
@@ -98,23 +138,6 @@ svg {
   width: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--family-serif);
-  font-weight: var(--fweight-light);
-  text-wrap: balance;
-}
-
-h4 {
-  color: var(--neutral-dark-gray-blue);
-  font-weight: var(--fweight-medium);
-  margin-block: 1rem;
-}
-
 p {
   max-width: 60ch;
   text-wrap: pretty;
@@ -125,8 +148,8 @@ ul {
   flex-direction: column;
   list-style: none;
   text-wrap: balance;
-  gap: 1rem;
-  
+  row-gap: 1rem;
+
   li {
     display: flex;
     justify-content: space-between;
@@ -138,6 +161,16 @@ ul {
       display: flex;
       align-items: center;
       gap: .5rem;
+    }
+
+    .list-item__score {
+      font-size: .825rem;
+      font-weight: var(--fweight-bold);
+      color: var(--neutral-dark-gray-blue);
+
+      span {
+        color: var(--neurtal-dark-gray-blue-rgba);
+      }
     }
   }
 }
