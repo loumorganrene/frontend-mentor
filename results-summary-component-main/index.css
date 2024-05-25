@@ -1,0 +1,99 @@
+:root {
+  --primary-red: hsl(0, 100%, 67%);
+  --primary-orangey: hsl(39, 100%, 56%);
+  --primary-green: hsl(166, 100%, 37%);
+  --primary-blue: hsl(234, 85%, 45%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(221, 100%, 96%);
+  --neutral-light-lavender: hsl(241, 100%, 89%);
+  --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --gradient-slate-blue: hsl(252, 100%, 67%);
+  --gradient-royal-blue: hsl(241, 81%, 54%);
+  --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --family-sansserif: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-family: var(--family-sansserif);
+  line-height: 1.25rem;
+  color: var(--neutral-wengebrown);
+  --fweight-light: 500;
+  --fweight-medium: 700;
+  --fweight-bold: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--family-serif);
+  font-weight: var(--fweight-light);
+  text-wrap: balance;
+  margin: 1.5rem 0;
+}
+
+p {
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+ul {
+
+  list-style: none;
+  text-wrap: balance;
+  padding: 0 2rem;
+  
+  li {
+    padding: 0 0 .75rem 1.25rem;
+  }
+}
+
+.responsive-image {
+  object-fit: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (min-width: 575px) {}
+@media (min-width: 768px) {}
