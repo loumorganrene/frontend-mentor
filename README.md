@@ -5,4 +5,5 @@
 - [Social Links Profile](https://frontend-mentor-social-links-profile-coral.vercel.app/)
 - [Blog Preview Card](https://frontend-mentor-blog-preview-card-mu.vercel.app/)
 - [FAQ Accordion](https://cosmic-dragon-dcc42b.netlify.app/)
+- [Results Summary Component](https://brilliant-cassata-fa83ed.netlify.app/)
 
