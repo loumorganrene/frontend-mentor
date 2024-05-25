@@ -123,7 +123,7 @@ header {
 section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0 2rem;
 }
 
@@ -132,6 +132,29 @@ picture,
 svg {
   display: block;
   width: 100%;
+}
+
+button {
+  width: 100%;
+  appearance: none;
+  background: var(--neutral-dark-gray-blue);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  margin: 0;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: var(--fweight-medium);
+  color: var(--neutral-white);
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      var(--gradient-slate-blue),
+      var(--gradient-royal-blue));
+  } 
 }
 
 .list_icon {
@@ -148,7 +171,7 @@ ul {
   flex-direction: column;
   list-style: none;
   text-wrap: balance;
-  row-gap: 1rem;
+  gap: 1rem;
 
   li {
     display: flex;
