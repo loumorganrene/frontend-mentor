@@ -105,6 +105,23 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  @media (min-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+article {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "summary";
+  @media (min-width: 768px) {
+    grid-template-areas: 
+      "header summary";
+    border-radius: 30px;
+    box-shadow: 0 5px 5px 1px var(--neurtal-dark-gray-blue-rgba);
+  }
 }
 
 header {
@@ -121,6 +138,7 @@ header {
   );
   font-size: .875rem;
   color: var(--neutral-light-lavender);
+  width: 100%;
 
   .text-subtitles {
     display: flex;
@@ -130,13 +148,29 @@ header {
     gap: .75rem;
     max-width: 300px;
   }
+
+  @media (min-width: 768px) {
+    max-width: 320px;
+    border-radius: 30px;
+    padding: 1.5rem 2rem  0;
+
+    .text-subtitles {
+      max-width: 230px;
+    }
+  }
+
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: 
+    "title"
+    "list"
+    "button";
+  grid-template-rows: .1fr 1fr .1fr;
+  grid-template-columns: auto;
   gap: 1.5rem;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
 }
 
 img,
@@ -160,6 +194,11 @@ button {
   color: var(--neutral-white);
   cursor: pointer;
   outline: none;
+
+  @media (min-width: 768px) {
+    padding: .5rem;
+    font-size: .75rem;
+  }
 
   &:hover,
   &:focus {
@@ -196,6 +235,16 @@ button {
     font-weight: var(--fweight-medium);
     color: var(--neutral-light-lavender-rgba);
   }
+
+  @media (min-width: 768px) {
+    width: 160px;
+    height: 160px;
+    padding: 2rem;
+
+    .text-important {
+      font-size: 3.5rem;
+    }
+  }
 }
 
 .list_icon {
@@ -208,26 +257,43 @@ p {
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: 
+    "list-item"
+    "list-item"
+    "list-item"
+    "list-item";
   list-style: none;
   text-wrap: balance;
   gap: 1rem;
 
+  @media (min-width: 768px) {
+    gap: .75rem;
+  }
+  
   li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+      "label . score";
+    grid-template-columns: 1fr .5fr 1fr;
     border-radius: 10px;
     padding: 1rem;
 
+    @media (min-width: 768px) {
+      padding: .75rem;
+    }
+
     .list-item__label {
+      grid-area: label;
+      justify-self: start;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
     .list-item__score {
+      grid-area: score;
+      justify-self: end;
       font-size: 0.825rem;
       font-weight: var(--fweight-bold);
       color: var(--neutral-dark-gray-blue);
